@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% load menu_tags %}
+
+{% for menu_name in menu_list %}
+    {% draw_menu menu_name %}
+{% endfor %}
+
+{% endblock content %}

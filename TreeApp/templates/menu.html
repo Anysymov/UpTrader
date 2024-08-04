@@ -1,0 +1,6 @@
+{% if menu_name == "Item not found" %}
+<h1><a href="/">{{ menu_name }}</a></h1>
+{% else %}
+<h3><a href="/">{{ menu_name }}</a></h3>
+{% include "menu_lines.html" with lines_list=lines_list %}
+{% endif %}

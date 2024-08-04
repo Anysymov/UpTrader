@@ -1,0 +1,16 @@
+{% for line in lines_list %}
+<li>
+    {% if line.0.line_url == None %}
+        <a href='/${{ line.0.menu_name.menu_name }}/{{ line.0.line_name }}/'>{{ line.0.line_name }}</a>
+    {% else %}
+        <a href=`{{ line.0.line_url }}`>{{ line.0.line_name }}</a>
+    {% endif %}
+
+    {% if line.1|length %}
+    <ul>
+        {% include "menu_lines.html" with lines_list=line.1 %}
+    </ul>
+    {% endif %}
+
+</li>
+{% endfor %}

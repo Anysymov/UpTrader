@@ -25,8 +25,6 @@ def get_line_tree(line_to_get, given_lines_list):
                         item_index = list(given_lines_list).index(item)
                         line_index = list(given_lines_list).index(line)
 
-                        print(item_index, line_index)
-
                         if item_index < line_index:
                             tree_list.insert(0, item)
                         else:
